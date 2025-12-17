@@ -12,7 +12,7 @@ public class Hooks {
     @Before
     public void beforeScenario() {
         Configuration.browser = "chrome";
-        Configuration.browserSize = true;
+        Configuration.browserSize = "1920x1080";
         Configuration.timeout = 8000;
     }
 

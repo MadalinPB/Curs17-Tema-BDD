@@ -21,9 +21,8 @@ public class FeedSteps {
         feedPage.adaugaPostare(inputText);
     }
 
-    @Then("Mesajul este adaugat cu succes")
-    public void verificaPostarea () {
-        String inputText = "";
+    @Then("Mesajul {string} este adaugat cu succes")
+    public void verificaPostarea (String inputText) {
         feedPage.cautaPostare(inputText);
     }
 }

@@ -45,8 +45,9 @@ public class SearchSteps {
 
     @Then("fiecare utilizator apare in rezultatele de cautare")
     public void verificaFiecareUtilizator() {
-        for (String name : numeCautate)
+        for (String name : numeCautate) {
             searchPage.searchFor(name);
-            searchPage.shouldSeeUserInResults();
+            searchPage.shouldSeeUserInResults(name);
+        }
     }
 }
