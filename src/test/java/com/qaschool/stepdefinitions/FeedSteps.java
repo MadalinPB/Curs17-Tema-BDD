@@ -16,12 +16,12 @@ public class FeedSteps {
         feedPage.openFeed();
     }
 
-    @When("Userul adauga o postare")
+    @When("Userul adauga postare {String}")
     public void adaugaPostare (String inputText) {
         feedPage.adaugaPostare(inputText);
     }
 
-    @Then("Mesajul {string} este adaugat cu succes")
+    @Then("Mesajul {String} este adaugat cu succes")
     public void verificaPostarea (String inputText) {
         feedPage.cautaPostare(inputText);
     }

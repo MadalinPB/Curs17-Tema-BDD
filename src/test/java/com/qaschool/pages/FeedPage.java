@@ -9,21 +9,21 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class FeedPage {
 
-    private By ButonPost = By.cssSelector("textarea[id='post_button']");
-    private By InputTextComentariu_Postare = By.cssSelector("textarea[id='post_text']");
-    private ElementsCollection WebElementPostareIntrodusa = $$("#post_body .post_body_content");
+    private By butonPost = By.cssSelector("textarea[id='post_button']");
+    private By inputTextComentariu_Postare = By.cssSelector("textarea[id='post_text']");
+    private ElementsCollection webElementPostareIntrodusa = $$("#post_body .post_body_content");
 
     public void openFeed() {
         open("https://test.hapifyme.com/index.php");
     }
 
     public void adaugaPostare(String inputText) {
-        $(InputTextComentariu_Postare).setValue(inputText);
-        $(ButonPost).click();
+        $(inputTextComentariu_Postare).setValue(inputText);
+        $(butonPost).click();
     }
 
     public void cautaPostare(String textDeIdentificat) {
-        WebElementPostareIntrodusa
+        webElementPostareIntrodusa
                 .findBy(text(textDeIdentificat))
                 .shouldBe(visible);
     }

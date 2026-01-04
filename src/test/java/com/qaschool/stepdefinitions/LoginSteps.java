@@ -15,7 +15,7 @@ public class LoginSteps {
         loginPage.openLogin();
     }
 
-    @When("utilizatorul se logheaza cu email {string} si parola {string}")
+    @When("utilizatorul se logheaza cu email {String} si parola {String}")
     public void doLogin(String email, String pass) {
         loginPage.loginWith(email, pass);
     }
